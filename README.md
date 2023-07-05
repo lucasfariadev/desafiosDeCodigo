@@ -4,10 +4,17 @@
 
 Este repositório conterá a resolução de desafios de manipulação de strings usando a linguagem Java (versão JDK 11). Cada desafio será uma função independente que receberá uma entrada específica e retornará a saída correspondente como uma string.
 
+## StringUtil
+A classe StringUtil foi criada para ser colocado a lógica das resoluções, seus métodos estão sendo criados como Static para que não haja a necessidade de instanciamento de um objeto.
+
 ## Desafio 1: Reverter a ordem das palavras nas frases, mantendo a ordem das palavras
 
 **Descrição:**
 O primeiro desafio consiste em inverter a ordem das palavras em uma frase, mantendo a ordem das palavras individuais.
+
+#### resolução:
+
+Para resolver esse desafio, foi implementada a função `inverterPalavras`, que recebe uma frase como entrada e retorna a frase com as palavras invertidas, mantendo a ordem das palavras individuais.
 
 ## Desafio 2: Remover todos os caracteres duplicados da string
 
