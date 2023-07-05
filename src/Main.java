@@ -13,8 +13,16 @@ public class Main {
             //------ segundo Desafio ------------------------
             String texto = "Hello, World!";
             String resultadoRemocao = StringUtil.removerCaracteresDuplicados(texto);
-            StringUtil.linha();
+            System.out.println("desafio 2: ");
             System.out.println(resultadoRemocao);
+            StringUtil.linha();
+            //-----------------------------------------------
+
+            //------ terceiro Desafio ------------------------
+            String textoPalindromo = "babad";
+            String resultadoSubstringPalindroma = StringUtil.encontrarSubstringPalindromaMaisLonga(textoPalindromo);
+            System.out.println("desafio 3: ");
+            System.out.println(resultadoSubstringPalindroma);
             StringUtil.linha();
             //-----------------------------------------------
     }

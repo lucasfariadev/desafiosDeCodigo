@@ -32,5 +32,37 @@ public class StringUtil {
         return resultado.toString();
     }
 
+    public static String encontrarSubstringPalindromaMaisLonga(String texto) {
+        int tamanhoMax = 0;
+        String resultado = "";
+
+        for (int i = 0; i < texto.length(); i++) {
+            for (int j = i + 1; j <= texto.length(); j++) {
+                String substr = texto.substring(i, j);
+                if (isPalindromo(substr) && substr.length() > tamanhoMax) {
+                    tamanhoMax = substr.length();
+                    resultado = substr;
+                }
+            }
+        }
+
+        return resultado;
+    }
+
+    private static boolean isPalindromo(String texto) {
+        int i = 0;
+        int j = texto.length() - 1;
+
+        while (i < j) {
+            if (texto.charAt(i) != texto.charAt(j)) {
+                return false;
+            }
+            i++;
+            j--;
+        }
+
+        return true;
+    }
+
 
 }

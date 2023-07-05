@@ -49,7 +49,7 @@ O segundo desafio consiste em remover todos os caracteres duplicados de uma stri
 
 #### Resolução:
 
-A resolução desse desafio será implementada na função `removerCaracteresDuplicados`, que receberá uma string como entrada e retornará a string sem os caracteres duplicados.
+A resolução desse desafio foi implementada na função `removerCaracteresDuplicados`, que recebe uma string como entrada e retorna a string sem os caracteres duplicados.
 ```
     public static String removerCaracteresDuplicados(String texto) {
         StringBuilder resultado = new StringBuilder();
@@ -70,6 +70,45 @@ A resolução desse desafio será implementada na função `removerCaracteresDup
 
 **Descrição:**
 O terceiro desafio consiste em encontrar a substring palíndroma mais longa em uma string.
+
+#### Resolução:
+
+A resolução desse desafio foi implementada na função `encontrarSubstringPalindromaMaisLonga`, que recebe uma string como entrada e retorna a substring palíndroma mais longa encontrada. Ela depende da função `isPalindromo` que verifica se ums string é ou não um palíndromo.
+```
+public static String encontrarSubstringPalindromaMaisLonga(String texto) {
+        int tamanhoMax = 0;
+        String resultado = "";
+
+        for (int i = 0; i < texto.length(); i++) {
+            for (int j = i + 1; j <= texto.length(); j++) {
+                String substr = texto.substring(i, j);
+                if (isPalindromo(substr) && substr.length() > tamanhoMax) {
+                    tamanhoMax = substr.length();
+                    resultado = substr;
+                }
+            }
+        }
+
+        return resultado;
+    }
+```    
+```
+  private static boolean isPalindromo(String texto) {
+  int i = 0;
+  int j = texto.length() - 1;
+  
+          while (i < j) {
+              if (texto.charAt(i) != texto.charAt(j)) {
+                  return false;
+              }
+              i++;
+              j--;
+          }
+  
+          return true;
+      }
+```
+
 
 ## Desafio 4: Colocar em maiúscula a primeira letra de cada frase na string
 
@@ -109,10 +148,22 @@ public void testInverterPalavras() {
     }
 ```
 
+#### Teste Desafio 3
+```
+  public void testEncontrarSubstringPalindromaMaisLonga() {
+          String texto = "babad";
+          String resultadoEsperado = "bab";
+  
+          String resultado = StringUtil.encontrarSubstringPalindromaMaisLonga(texto);
+  
+          assertEquals(resultadoEsperado, resultado);
+      }
+```
+
 ### Observações importantes:
 
 - Os desafios estão em desenvolvimento.
-- Os desafios serão resolvidos utilizando a linguagem Java na versão 11 do JDK.
+- Os desafios estão sendo resolvidos utilizando a linguagem Java na versão 11 do JDK.
 - Para todos os desafios, será assumido que a entrada contém apenas caracteres alfabéticos, espaços e sinais de pontuação.
 - A saída para cada desafio será retornada como uma string.
 

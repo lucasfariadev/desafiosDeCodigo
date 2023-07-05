@@ -22,5 +22,15 @@ public class StringUtilTest {
 
         assertEquals(resultadoEsperado, resultado);
     }
+
+    @Test
+    public void testEncontrarSubstringPalindromaMaisLonga() {
+        String texto = "babad";
+        String resultadoEsperado = "bab";
+
+        String resultado = StringUtil.encontrarSubstringPalindromaMaisLonga(texto);
+
+        assertEquals(resultadoEsperado, resultado);
+    }
 }
 
