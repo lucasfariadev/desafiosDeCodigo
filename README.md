@@ -4,6 +4,17 @@
 
 Este repositório conterá a resolução de desafios de manipulação de strings usando a linguagem Java (versão JDK 11). Cada desafio será uma função independente que receberá uma entrada específica e retornará a saída correspondente como uma string.
 
+## Menu
+
+- [Desafio 1](#Desafio-1)
+- [Desafio 2](#Desafio-2)
+- [Desafio 3](#Desafio-3)
+- [Desafio 4](#Desafio-4)
+- [Desafio 5](#Desafio-5)
+- [Testes](#Testes-com-JUnit)
+- [Observações](#Observações-importantes)
+
+
 ## StringUtil
 A classe StringUtil foi criada para ser colocado a lógica das resoluções, seus métodos estão sendo criados como Static para que não haja a necessidade de instanciamento de um objeto.
 
