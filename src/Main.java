@@ -9,5 +9,13 @@ public class Main {
             System.out.println(resultado);
             StringUtil.linha();
             //-----------------------------------------------
+
+            //------ segundo Desafio ------------------------
+            String texto = "Hello, World!";
+            String resultadoRemocao = StringUtil.removerCaracteresDuplicados(texto);
+            StringUtil.linha();
+            System.out.println(resultadoRemocao);
+            StringUtil.linha();
+            //-----------------------------------------------
     }
 }

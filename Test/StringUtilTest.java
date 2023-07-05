@@ -12,5 +12,15 @@ public class StringUtilTest {
 
         assertEquals(resultadoEsperado, resultado);
     }
+
+    @Test
+    public void testRemoverCaracteresDuplicados() {
+        String texto = "Hello, World!";
+        String resultadoEsperado = "Helo, Wrd!";
+
+        String resultado = StringUtil.removerCaracteresDuplicados(texto);
+
+        assertEquals(resultadoEsperado, resultado);
+    }
 }
 

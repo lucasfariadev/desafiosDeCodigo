@@ -12,6 +12,8 @@ Este repositório conterá a resolução de desafios de manipulação de strings
 - [Desafio 4](#desafio-4-colocar-em-maiúscula-a-primeira-letra-de-cada-frase-na-string)
 - [Desafio 5](#desafio-5-verificar-se-a-string-é-um-anagrama-de-um-palíndromo)
 - [Testes](#Testes-com-JUnit)
+  - [Desafio 1](#Teste-Desafio-1)
+  - [Desafio 2](#Teste-Desafio-2)
 - [Observações](#Observações-importantes)
 
 
@@ -45,6 +47,25 @@ public static String inverterPalavras(String frase) {
 **Descrição:**
 O segundo desafio consiste em remover todos os caracteres duplicados de uma string.
 
+#### Resolução:
+
+A resolução desse desafio será implementada na função `removerCaracteresDuplicados`, que receberá uma string como entrada e retornará a string sem os caracteres duplicados.
+```
+    public static String removerCaracteresDuplicados(String texto) {
+        StringBuilder resultado = new StringBuilder();
+        Set<Character> caracteres = new HashSet<>();
+
+        for (char c : texto.toCharArray()) {
+            if (!caracteres.contains(c)) {
+                caracteres.add(c);
+                resultado.append(c);
+            }
+        }
+
+        return resultado.toString();
+    }
+```
+
 ## Desafio 3: Encontrar a substring palíndroma mais longa
 
 **Descrição:**
@@ -76,6 +97,17 @@ public void testInverterPalavras() {
     }
 ```
 
+#### Teste Desafio 2
+```
+    public void testRemoverCaracteresDuplicados() {
+        String texto = "Hello, World!";
+        String resultadoEsperado = "Helo, Wrd!";
+
+        String resultado = StringUtil.removerCaracteresDuplicados(texto);
+
+        assertEquals(resultadoEsperado, resultado);
+    }
+```
 
 ### Observações importantes:
 
