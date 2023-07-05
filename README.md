@@ -36,6 +36,11 @@ O quarto desafio consiste em colocar em maiúscula a primeira letra de cada fras
 **Descrição:**
 O quinto desafio consiste em verificar se uma string é um anagrama de um palíndromo.
 
+## Testes com JUnit
+
+Foram implementados testes utilizando o framework de testes JUnit para validar as soluções dos desafios. Os testes podem ser encontrados no módulo Test na classe StringUtilTest. Caso seu ambiente esteja configurado corretamente, pode executar todos os testes.
+
+
 ### Observações importantes:
 
 - Os desafios estão em desenvolvimento.
