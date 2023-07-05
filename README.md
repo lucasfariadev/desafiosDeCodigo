@@ -15,6 +15,7 @@ Este repositório conterá a resolução de desafios de manipulação de strings
   - [Desafio 1](#Teste-Desafio-1)
   - [Desafio 2](#Teste-Desafio-2)
   - [Desafio 3](#Teste-Desafio-3)
+  - [Desafio 4](#Teste-Desafio-4)
 - [Observações](#Observações-importantes)
 
 
@@ -116,6 +117,23 @@ public static String encontrarSubstringPalindromaMaisLonga(String texto) {
 **Descrição:**
 O quarto desafio consiste em colocar em maiúscula a primeira letra de cada frase em uma string.
 
+#### Resolução:
+Para resolver o quarto desafio foi implementada a função `primeiraLetraMaiuscula`. Ela divide a string em frases usando caracteres delimitadores como ".", "?", ou "!", seguidos por um espaço em branco. Em seguida, percorre cada frase, verificando se não está vazia e substituindo a primeira letra pela sua versão maiúscula. Por fim, reúne as frases em uma única string, mantendo a pontuação original de cada uma.
+```
+public static String primeiraLetraMaiuscula(String texto) {
+        String[] frases = texto.split("(?<=\\.\\s|\\?\\s|!\\s)");
+        StringBuilder resultado = new StringBuilder();
+
+        for (String frase : frases) {
+            if (!frase.trim().isEmpty()) {
+                frase = frase.substring(0, 1).toUpperCase() + frase.substring(1);
+            }
+            resultado.append(frase);
+        }
+
+        return resultado.toString();
+    }
+```
 ## Desafio 5: Verificar se a string é um anagrama de um palíndromo
 
 **Descrição:**
@@ -159,6 +177,19 @@ public void testInverterPalavras() {
   
           assertEquals(resultadoEsperado, resultado);
       }
+```
+
+#### Teste Desafio 4
+```
+public void testPrimeiraLetraMaiuscula() {
+        String frase = "hello. how are you? i'm fine, thank you.";
+        String resultadoEsperado = "Hello. How are you? I'm fine, thank you.";
+
+        String resultado = StringUtil.primeiraLetraMaiuscula(frase);
+
+        assertEquals(resultadoEsperado, resultado);
+    }
+
 ```
 
 ### Observações importantes:

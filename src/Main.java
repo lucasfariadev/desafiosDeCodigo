@@ -25,5 +25,14 @@ public class Main {
             System.out.println(resultadoSubstringPalindroma);
             StringUtil.linha();
             //-----------------------------------------------
+
+            //------ quarto Desafio ------------------------
+            String frase4 = "hello. how are you? i'm fine, thank you.";
+            String resultado4 = StringUtil.primeiraLetraMaiuscula(frase4);
+            System.out.println("desafio 4:");
+            System.out.println(resultado4);
+            StringUtil.linha();
+            //-----------------------------------------------
+
     }
 }

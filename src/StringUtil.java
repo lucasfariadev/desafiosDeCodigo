@@ -64,5 +64,21 @@ public class StringUtil {
         return true;
     }
 
+    public static String primeiraLetraMaiuscula(String texto) {
+        String[] frases = texto.split("(?<=\\.\\s|\\?\\s|!\\s)");
+        StringBuilder resultado = new StringBuilder();
+
+        for (String frase : frases) {
+            if (!frase.trim().isEmpty()) {
+                frase = frase.substring(0, 1).toUpperCase() + frase.substring(1);
+            }
+            resultado.append(frase);
+        }
+
+        return resultado.toString();
+    }
+
+
+
 
 }

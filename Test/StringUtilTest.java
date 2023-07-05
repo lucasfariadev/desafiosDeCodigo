@@ -32,5 +32,16 @@ public class StringUtilTest {
 
         assertEquals(resultadoEsperado, resultado);
     }
+
+    @Test
+    public void testPrimeiraLetraMaiuscula() {
+        String frase = "hello. how are you? i'm fine, thank you.";
+        String resultadoEsperado = "Hello. How are you? I'm fine, thank you.";
+
+        String resultado = StringUtil.primeiraLetraMaiuscula(frase);
+
+        assertEquals(resultadoEsperado, resultado);
+    }
+
 }
 
