@@ -16,6 +16,19 @@ O primeiro desafio consiste em inverter a ordem das palavras em uma frase, mante
 
 Para resolver esse desafio, foi implementada a função `inverterPalavras`, que recebe uma frase como entrada e retorna a frase com as palavras invertidas, mantendo a ordem das palavras individuais.
 
+``` 
+public static String inverterPalavras(String frase) {
+        String[] palavras = frase.split(" ");
+        StringBuilder resultado = new StringBuilder();
+
+        for (int i = palavras.length - 1; i >= 0; i--) {
+            resultado.append(palavras[i]).append(" ");
+        }
+        
+        return resultado.toString().trim();
+    }
+```
+
 ## Desafio 2: Remover todos os caracteres duplicados da string
 
 **Descrição:**
@@ -39,6 +52,18 @@ O quinto desafio consiste em verificar se uma string é um anagrama de um palín
 ## Testes com JUnit
 
 Foram implementados testes utilizando o framework de testes JUnit para validar as soluções dos desafios. Os testes podem ser encontrados no módulo Test na classe StringUtilTest. Caso seu ambiente esteja configurado corretamente, pode executar todos os testes.
+
+#### Teste Desafio 1
+```
+public void testInverterPalavras() {
+        String frase = "Hello, World! OpenAI is amazing.";
+        String resultadoEsperado = "amazing. is OpenAI World! Hello,";
+
+        String resultado = StringUtil.inverterPalavras(frase);
+
+        assertEquals(resultadoEsperado, resultado);
+    }
+```
 
 
 ### Observações importantes:
