@@ -14,6 +14,7 @@ Este repositório conterá a resolução de desafios de manipulação de strings
 - [Testes](#Testes-com-JUnit)
   - [Desafio 1](#Teste-Desafio-1)
   - [Desafio 2](#Teste-Desafio-2)
+  - [Desafio 3](#Teste-Desafio-3)
 - [Observações](#Observações-importantes)
 
 
