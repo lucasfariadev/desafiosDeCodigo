@@ -6,11 +6,11 @@ Este repositório conterá a resolução de desafios de manipulação de strings
 
 ## Menu
 
-- [Desafio 1](#Desafio-1)
-- [Desafio 2](#Desafio-2)
-- [Desafio 3](#Desafio-3)
-- [Desafio 4](#Desafio-4)
-- [Desafio 5](#Desafio-5)
+- [Desafio 1](#desafio-1-reverter-a-ordem-das-palavras-nas-frases-mantendo-a-ordem-das-palavras)
+- [Desafio 2](#desafio-2-remover-todos-os-caracteres-duplicados-da-string)
+- [Desafio 3](#desafio-3-encontrar-a-substring-palíndroma-mais-longa)
+- [Desafio 4](#desafio-4-colocar-em-maiúscula-a-primeira-letra-de-cada-frase-na-string)
+- [Desafio 5](#desafio-5-verificar-se-a-string-é-um-anagrama-de-um-palíndromo)
 - [Testes](#Testes-com-JUnit)
 - [Observações](#Observações-importantes)
 
