@@ -43,5 +43,15 @@ public class StringUtilTest {
         assertEquals(resultadoEsperado, resultado);
     }
 
+    @Test
+    public void testIsAnagramaDePalindromo() {
+        String texto = "racecar";
+        boolean resultadoEsperado = true;
+
+        boolean resultado = StringUtil.isAnagramaDePalindromo(texto);
+
+        assertEquals(resultadoEsperado, resultado);
+    }
+
 }
 

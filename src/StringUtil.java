@@ -1,4 +1,6 @@
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 public class StringUtil {
@@ -78,7 +80,23 @@ public class StringUtil {
         return resultado.toString();
     }
 
+    public static boolean isAnagramaDePalindromo(String texto) {
+        Map<Character, Integer> frequencia = new HashMap<>();
 
+        for (char c : texto.toCharArray()) {
+            frequencia.put(c, frequencia.getOrDefault(c, 0) + 1);
+        }
+
+        int qtdCaracteresImpares = 0;
+
+        for (int count : frequencia.values()) {
+            if (count % 2 != 0) {
+                qtdCaracteresImpares++;
+            }
+        }
+
+        return qtdCaracteresImpares <= 1;
+    }
 
 
 }

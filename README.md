@@ -16,6 +16,7 @@ Este repositório conterá a resolução de desafios de manipulação de strings
   - [Desafio 2](#Teste-Desafio-2)
   - [Desafio 3](#Teste-Desafio-3)
   - [Desafio 4](#Teste-Desafio-4)
+  - [Desafio 5](#Teste-Desafio-5)
 - [Observações](#Observações-importantes)
 
 
@@ -139,6 +140,27 @@ public static String primeiraLetraMaiuscula(String texto) {
 **Descrição:**
 O quinto desafio consiste em verificar se uma string é um anagrama de um palíndromo.
 
+#### Resolução:
+Para resolver o quinto desafio foi implementada a função `isAnagramaDePalindromo`. Nela é contada a frequência de ocorrência de cada caractere na string utilizando um mapa. Depois é verificado quantos caracteres têm uma quantidade ímpar de ocorrências e então, se o número de caracteres com quantidade ímpar for no máximo 1, a string é considerada um anagrama de um palíndromo, caso contrário, não é.
+```
+public static boolean isAnagramaDePalindromo(String texto) {
+        Map<Character, Integer> frequencia = new HashMap<>();
+
+        for (char c : texto.toCharArray()) {
+            frequencia.put(c, frequencia.getOrDefault(c, 0) + 1);
+        }
+
+        int qtdCaracteresImpares = 0;
+
+        for (int count : frequencia.values()) {
+            if (count % 2 != 0) {
+                qtdCaracteresImpares++;
+            }
+        }
+
+        return qtdCaracteresImpares <= 1;
+    }
+```
 ## Testes com JUnit
 
 Foram implementados testes utilizando o framework de testes JUnit para validar as soluções dos desafios. Os testes podem ser encontrados no módulo Test na classe StringUtilTest. Caso seu ambiente esteja configurado corretamente, pode executar todos os testes.
@@ -191,6 +213,19 @@ public void testPrimeiraLetraMaiuscula() {
     }
 
 ```
+
+#### Teste Desafio 5
+```
+  public void testIsAnagramaDePalindromo() {
+        String texto = "racecar";
+        boolean resultadoEsperado = true;
+
+        boolean resultado = StringUtil.isAnagramaDePalindromo(texto);
+
+        assertEquals(resultadoEsperado, resultado);
+    }
+```
+
 
 ### Observações importantes:
 
