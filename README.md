@@ -1,8 +1,8 @@
 # Desafios de Manipulação de Strings em Java
 
-![Status](https://img.shields.io/badge/Status-Em%20desenvolvimento-yellow)
+![Status](https://img.shields.io/badge/Status-Finalizado-brightgreen)
 
-Este repositório conterá a resolução de desafios de manipulação de strings usando a linguagem Java (versão JDK 11). Cada desafio será uma função independente que receberá uma entrada específica e retornará a saída correspondente como uma string.
+Este repositório contém a resolução de desafios de manipulação de strings usando a linguagem Java (versão JDK 11). Cada desafio foi resolvido em uma função independente que recebe uma entrada específica e retorna a saída correspondente como uma string.
 
 ## Menu
 
@@ -229,9 +229,8 @@ public void testPrimeiraLetraMaiuscula() {
 
 ### Observações importantes:
 
-- Os desafios estão em desenvolvimento.
-- Os desafios estão sendo resolvidos utilizando a linguagem Java na versão 11 do JDK.
-- Para todos os desafios, será assumido que a entrada contém apenas caracteres alfabéticos, espaços e sinais de pontuação.
-- A saída para cada desafio será retornada como uma string.
+- Os desafios estão foram resolvidos utilizando a linguagem Java na versão 11 do JDK.
+- Para todos os desafios, foi assumido que a entrada contém apenas caracteres alfabéticos, espaços e sinais de pontuação.
+- A saída para cada desafio é retornada como uma string.
 
 Fique à vontade para explorar o código-fonte conforme eu disponibilizar e testar as soluções dos desafios por conta própria! Caso queira compartilhar com esse repositório, fique a vontade para criar um fork, eu apenas não poderei aceitar, por hora, quaisquer pull requests pois este é um repositório avaliativo para uma vaga.
