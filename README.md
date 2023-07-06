@@ -218,9 +218,9 @@ public void testPrimeiraLetraMaiuscula() {
 ```
   public void testIsAnagramaDePalindromo() {
         String texto = "racecar";
-        boolean resultadoEsperado = true;
+        String resultadoEsperado = "true";
 
-        boolean resultado = StringUtil.isAnagramaDePalindromo(texto);
+        String resultado = StringUtil.isAnagramaDePalindromo(texto);
 
         assertEquals(resultadoEsperado, resultado);
     }
