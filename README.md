@@ -141,7 +141,7 @@ public static String primeiraLetraMaiuscula(String texto) {
 O quinto desafio consiste em verificar se uma string é um anagrama de um palíndromo.
 
 #### Resolução:
-Para resolver o quinto desafio foi implementada a função `isAnagramaDePalindromo`. Nela é contada a frequência de ocorrência de cada caractere na string utilizando um mapa. Depois é verificado quantos caracteres têm uma quantidade ímpar de ocorrências e então, se o número de caracteres com quantidade ímpar for no máximo 1, a string é considerada um anagrama de um palíndromo, caso contrário, não é.
+Para resolver o quinto desafio foi implementada a função `isAnagramaDePalindromo`. Nela é contada a frequência de ocorrência de cada caractere na string utilizando um mapa. Depois é verificado quantos caracteres têm uma quantidade ímpar de ocorrências e então, se o número de caracteres com quantidade ímpar for no máximo 1, a string é considerada um anagrama de um palíndromo, caso contrário, não é. Ela então retornará uma string com "true" ou "false"
 ```
 public static boolean isAnagramaDePalindromo(String texto) {
         Map<Character, Integer> frequencia = new HashMap<>();

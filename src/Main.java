@@ -36,7 +36,7 @@ public class Main {
 
             //------ quinto Desafio ------------------------
             String frase5 = "racecar";
-            boolean resultado5 = StringUtil.isAnagramaDePalindromo(frase5);
+            String resultado5 = StringUtil.isAnagramaDePalindromo(frase5);
             System.out.println("Desafio 5:");
             System.out.println(resultado5);
             StringUtil.linha();

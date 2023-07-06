@@ -80,7 +80,7 @@ public class StringUtil {
         return resultado.toString();
     }
 
-    public static boolean isAnagramaDePalindromo(String texto) {
+    public static String isAnagramaDePalindromo(String texto) {
         Map<Character, Integer> frequencia = new HashMap<>();
 
         for (char c : texto.toCharArray()) {
@@ -95,8 +95,9 @@ public class StringUtil {
             }
         }
 
-        return qtdCaracteresImpares <= 1;
+        return qtdCaracteresImpares <= 1 ? "true" : "false";
     }
+
 
 
 }
